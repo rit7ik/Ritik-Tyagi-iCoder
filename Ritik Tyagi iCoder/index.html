@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>iCoder - Best For Programmers</title>
+    <!-- Using the latest stable Bootstrap CDN and corrected integrity hash -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Custom Styles for a cool look and responsiveness -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8f9fa; /* Light background for contrast */
+      }
+      /* Responsive height for carousel images */
+      .carousel-item img {
+        min-height: 50vh; 
+        max-height: 80vh; 
+        object-fit: cover;
+      }
+      /* Enhanced caption readability */
+      .carousel-caption {
+        background: rgba(0, 0, 0, 0.45); 
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      /* Enhanced card hover effect */
+      .row.g-0:hover {
+        transform: translateY(-5px);
+        transition: transform 0.3s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">iCoder</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Topics</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Technology</a></li>
+                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Support</a></li>
+                <li><a class="dropdown-item" href="#">Write For Us</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul> 
+          
+          <!-- Search Form -->
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
+
+          <!-- Login/Sign Up Buttons -->
+          <!-- Note: Corrected data-bs-target IDs to be camelCase for standard practice -->
+          <div class="d-flex ms-lg-2 mt-2 mt-lg-0"> 
+            <button class="btn btn-sm btn-danger me-2" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+            <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#signUpModal">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login To iCoder</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">Email address</label>
+                <!-- Corrected input class to standard form-control -->
+                <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="loginPassword">
+              </div>
+              <button type="submit" class="btn btn-primary">Log In</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signUpModalLabel">Get An iCoder Account</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="signUpEmail" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="signUpEmail" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="signUpPassword" class="form-label">Password</label>
+                <!-- Ensuring unique IDs for all inputs -->
+                <input type="password" class="form-control" id="signUpPassword">
+              </div>
+              <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword">
+              </div>
+              <button type="submit" class="btn btn-primary">Create Account</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>    
+    
+    <!-- Carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade shadow-lg">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-inner">
+        <!-- Replaced image paths with placeholder URLs -->
+        <div class="carousel-item active">
+          <img src="https://placehold.co/1400x750/007bff/ffffff?text=Code+is+Life" class="d-block w-100" alt="First slide image">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="fw-bold">Welcome to iCoder</h2>
+            <p>Technology News, Development And Trends.</p>
+            <button class="btn btn-danger">Technology</button>
+            <button class="btn btn-primary">Web Development</button>
+            <button class="btn btn-success">Tech Fun</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="1.jpg" class="d-block w-100" alt="Second slide image">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="fw-bold">The Best Coding Blog</h2>
+            <p>Technology News, Development And Trends.</p>
+            <button class="btn btn-danger">Technology</button>
+            <button class="btn btn-primary">Web Development</button>
+            <button class="btn btn-success">Tech Fun</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="2.jpg" class="d-block w-100" alt="Third slide image">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="fw-bold">Award Winning Blog</h2>
+            <p>Technology News, Development And Trends.</p>
+            <button class="btn btn-danger">Technology</button>
+            <button class="btn btn-primary">Web Development</button>
+            <button class="btn btn-success">Tech Fun</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="3.jpg" class="d-block w-100" alt="Third slide image">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="fw-bold">Smart Way To Learn Code</h2>
+            <p>Technology News, Development And Trends.</p>
+            <button class="btn btn-danger">Technology</button>
+            <button class="btn btn-primary">Web Development</button>
+            <button class="btn btn-success">Tech Fun</button>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div> 
+    
+    <!-- Content Cards Section 1 -->
+    <div class="container my-5">
+      <h2 class="text-center mb-5 fw-bold text-dark">iCoder's Top Picks</h2>
+      <div class="row mb-4"> 
+        <div class="col-md-6"> 
+          <div class="row g-0 border rounded overflow-hidden flex-md-row shadow-sm h-md-250 position-relative bg-white"> 
+            <div class="col p-4 d-flex flex-column position-static"> 
+              <strong class="d-inline-block mb-2 text-primary">World</strong>
+              <h3 class="mb-0">Global Conferences</h3> 
+              <p class="card-text mb-auto">Many Best Live, Recorded Lessons By Best Teachers In Global World. They Tell You About Latest Tools And Techniques.</p>
+              <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">Continue reading</a> 
+            </div> 
+            <div class="col-auto d-none d-lg-block"> 
+              <!-- Placeholder Image -->
+              <img src="https://placehold.co/250x250/007bff/ffffff?text=Global+Tech" alt="Image for world conferences" height="250" width="250" class="img-fluid"> 
+            </div> 
+          </div> 
+        </div>
+      
+        <div class="col-md-6"> 
+          <div class="row g-0 border rounded overflow-hidden flex-md-row shadow-sm h-md-250 position-relative bg-white">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Design</strong> 
+              <h3 class="mb-0">Learn Designing</h3> 
+              <p class="mb-auto">Learn Best Designing By using Best Tools, Webs, and modern principles for creating beautiful UIs.</p>
+              <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">Continue reading</a> 
+            </div> 
+            <div class="col-auto d-none d-lg-block"> 
+              <!-- Placeholder Image -->
+              <img src="https://placehold.co/250x250/28a745/ffffff?text=Modern+Design" alt="Image for design courses" height="250" width="250" class="img-fluid"> 
+            </div> 
+          </div> 
+        </div> 
+      </div>
+    </div>
+
+    <!-- Content Cards Section 2 -->
+    <div class="container my-4">
+      <div class="row mb-2"> 
+        <div class="col-md-6"> 
+          <div class="row g-0 border rounded overflow-hidden flex-md-row shadow-sm h-md-250 position-relative bg-white"> 
+            <div class="col p-4 d-flex flex-column position-static"> 
+              <strong class="d-inline-block mb-2 text-danger">Coding</strong>
+              <h3 class="mb-0">All Coding Courses</h3> 
+              <p class="mb-auto">HTML/CSS/JavaScript/Python/C/C++/ & Etc. Master development fundamentals with guided lessons.</p>
+              <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">Continue reading</a> 
+            </div> 
+            <div class="col-auto d-none d-lg-block"> 
+              <!-- Placeholder Image -->
+              <img src="https://placehold.co/250x250/dc3545/ffffff?text=Coding+Mastery" alt="Image for coding courses" height="250" width="250" class="img-fluid"> 
+            </div> 
+          </div> 
+        </div>
+      
+        <div class="col-md-6"> 
+          <div class="row g-0 border rounded overflow-hidden flex-md-row shadow-sm h-md-250 position-relative bg-white">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-warning">Quizzes</strong> 
+              <h3 class="mb-0">Test Your Solving Ability</h3> 
+              <p class="mb-auto">Fun Loving Games and Quizzes like Maths, English, G.K, And Etc. Sharpen your mind!</p>
+              <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">Continue reading</a> 
+            </div> 
+            <div class="col-auto d-none d-lg-block"> 
+              <!-- Placeholder Image -->
+              <img src="https://placehold.co/250x250/ffc107/333333?text=Brain+Games" alt="Image for quiz and games" height="250" width="250" class="img-fluid"> 
+            </div> 
+          </div> 
+        </div> 
+      </div>
+    </div>
+    
+    <!-- Footer (Corrected Structure) -->
+    <footer class="bg-dark text-white pt-3 pb-2 mt-5">
+      <div class="container">
+        <p class="float-end mb-0">
+          <a href="#" class="text-white text-decoration-none">Back to top</a>
+        </p>
+        <p class="mb-0">
+          &copy; 2025 iCoder | All rights reserved. 
+          <a href="#" class="text-white text-decoration-none">Privacy</a> &middot; 
+          <a href="#" class="text-white text-decoration-none">Terms</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle (Corrected integrity hash) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>iCoder - About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+      
+      /* --- Custom Variables for Branding --- */
+      :root {
+        --icoder-deep-blue: #1f3a5f; /* Professional Dark Blue */
+        --icoder-teal: #00bcd4;      /* Vibrant Teal Accent */
+        --icoder-light-bg: #f5f8fa;  /* Off-White Background */
+        --icoder-primary: #3f51b5;   /* Indigo Primary (for Footer/Links) */
+      }
+      
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--icoder-light-bg); 
+      }
+      
+      /* --- Navbar & Footer --- */
+      .navbar-dark.bg-dark {
+          background-color: var(--icoder-deep-blue) !important;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .custom-footer {
+        background-color: var(--icoder-primary) !important; 
+        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .custom-footer a {
+          color: var(--icoder-teal) !important; 
+      }
+      
+      /* --- Main Content Section --- */
+      .main-content-bg {
+          background-color: var(--icoder-light-bg);
+          padding: 4rem 0;
+      }
+
+      /* --- Featurette Styling --- */
+      .featurette-heading {
+          color: var(--icoder-deep-blue) !important; /* Deep Blue Heading */
+          font-weight: 800 !important;
+          font-size: 2.5rem;
+      }
+      .text-body-secondary {
+          color: var(--icoder-teal) !important; /* Teal Accent Subtext */
+          font-weight: 600;
+      }
+      .featurette-divider {
+          margin: 5rem 0; /* Increased margin for separation */
+          border: 0;
+          height: 1px;
+          background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--icoder-teal), rgba(0, 0, 0, 0));
+      }
+      
+      /* --- Card Hover Effects (Stronger Visual Feedback) --- */
+      .featurette {
+          border-radius: 12px !important;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+          transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+      .featurette:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      }
+      .hover-bg-light-info:hover {
+          background-color: #e0f7fa !important; /* Very light Cyan */
+      }
+      .hover-bg-light-success:hover {
+          background-color: #e8f5e9 !important; /* Very light Mint */
+      }
+      
+      /* Image Styling */
+      .featurette img {
+          border-radius: 8px;
+          object-fit: cover;
+          height: 300px; /* Consistent height for better look */
+          width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" style="color: var(--icoder-teal);" href="index.html">iCoder</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Topics</a>
+              <ul class="dropdown-menu shadow">
+                <li><a class="dropdown-item" href="#">Technology</a></li>
+                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Support</a></li>
+                <li><a class="dropdown-item" href="#">Write For Us</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+            <button class="btn btn-outline-light" style="color: var(--icoder-teal); border-color: var(--icoder-teal);" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container-fluid main-content-bg">
+        <div class="container my-5">
+            <h2 class="text-center mb-5 fw-bolder text-icoder-deep-blue display-5">✨ The iCoder Story: Crafting the Future of Code ✨</h2>
+            
+            <div class="row featurette d-flex justify-content-center align-items-center bg-white p-4 shadow hover-bg-light-info">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">The Genesis of Innovation.<span class="text-body-secondary"> It All Started With an Idea.</span></h2>
+                    <p class="lead text-muted">iCoder began with a simple, powerful idea: to make **high-quality coding education** accessible to everyone, everywhere. Our founders envisioned a platform where passion meets proficiency, and where every user can turn their coding dreams into reality.</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-fluid shadow" src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&w=500&q=80" alt="Creative coding project initiation" loading="lazy">
+                </div>
+            </div>
+            
+            <hr class="featurette-divider">
+            
+            <div class="row featurette d-flex justify-content-center align-items-center bg-light p-4 shadow hover-bg-light-success">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1">Building the Future, Since 2025.<span class="text-body-secondary"> A Decade of Excellence.</span></h2>
+                    <p class="lead text-muted">Our actual journey started in **2010**, marking over a decade of dedication to fostering a global community of developers. We've continuously evolved our curriculum to stay ahead of the ever-changing **tech landscape**, ensuring our learners always have the most relevant skills.</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="img-fluid shadow" src="about2.jpg" alt="" loading="lazy">
+                </div>
+            </div>
+            
+            <hr class="featurette-divider">
+
+            <div class="row featurette d-flex justify-content-center align-items-center bg-white p-4 shadow hover-bg-light-info">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">Driven by Our Values.<span class="text-body-secondary"> Integrity, Innovation, Community.</span></h2>
+                    <p class="lead text-muted">Our platform is built on three core pillars: **Integrity** in our teaching, **Innovation** in our tools, and fostering a strong **Community** among our learners. We believe the best way to learn is by doing, sharing, and collaborating.</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-fluid shadow" src="about1.jpg" alt="" loading="lazy">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette d-flex justify-content-center align-items-center bg-light p-4 shadow hover-bg-light-success">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1">Mentored by Global Leaders.<span class="text-body-secondary"> Meet Our Expert Educators.</span></h2>
+                    <p class="lead text-muted">Our instructors aren't just teachers; they're **industry experts** and senior developers who bring **real-world experience** and cutting-edge knowledge directly into your online classroom. Learn from the best to become the best.</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="img-fluid shadow" src="about3.jpg" alt="" loading="lazy">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+            
+            <div class="row featurette d-flex justify-content-center align-items-center bg-white p-4 shadow hover-bg-light-info">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">More Than Just Classes.<span class="text-body-secondary"> Interactive Learning Ecosystem.</span></h2>
+                    <p class="lead text-muted">We offer an entire learning ecosystem: **Best Online Classes**, integrated **Coding Games** for practice, Hackathons, and a supportive forum. Our approach ensures learning is effective, engaging, and fun.</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-fluid shadow" src="about.4.jpg" alt="">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette d-flex justify-content-center align-items-center bg-light p-4 shadow hover-bg-light-success">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1">Join the Revolution.<span class="text-body-secondary"> Your Future Starts Now.</span></h2>
+                    <p class="lead text-muted">Our goal is to be the world's leading coding education platform. We invite you to join our growing community and take the first step towards a rewarding career in technology. **Let's code the future together!**</p>
+                    <p><a class="btn btn-lg fw-bold" style="background-color: var(--icoder-teal); color: white;" href="#">Start Learning Today</a></p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="img-fluid shadow" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&w=500&q=80" alt="Online learning ecosystem with code and screens" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <footer class="container-fluid custom-footer text-white text-center py-4">
+        <div class="container">
+            <p class="float-end mb-1">
+                <a href="#">Back to top</a>
+            </p>
+            <p class="mb-0">&copy; 2025 iCoder | All rights reserved. &bull; 
+                <a href="#">Privacy Policy</a> &bull; 
+                <a href="#">Terms of Use</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  </body>
+</html>
